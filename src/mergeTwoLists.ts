@@ -7,7 +7,7 @@ const mergeTwoLists = (
   l2: number[] | null
 ): number[] | null => {
   const newList: number[] = [...(l1 || []), ...(l2 || [])];
-  return newList.sort();
+  return newList.sort((a, b) => a - b);
 };
 
 console.log(mergeTwoLists([1, 2, 4], [1, 3, 4]));

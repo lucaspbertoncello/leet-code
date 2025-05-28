@@ -4,7 +4,7 @@
   "main": "index.ts",
   "license": "MIT",
   "scripts": {
-    "start": "ts-node src/findMedianSortedArrays.ts"
+    "dev": "ts-node src/palindromeNumber.ts"
   },
   "dependencies": {},
   "devDependencies": {
