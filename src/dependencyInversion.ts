@@ -30,7 +30,7 @@ class DynamoRepo implements UsersRepository {
   }
 }
 
-const UsersControllerPrisma = new UsersController(new DynamoRepo());
+const UsersControllerPrisma = new UsersController(new PrismaRepo());
 const UsersControllerDynamo = new UsersController(new DynamoRepo());
 
 console.log(UsersControllerPrisma.findById());
