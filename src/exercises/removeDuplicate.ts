@@ -2,7 +2,6 @@ import { z } from "zod";
 
 // Removes duplicate accounts based on the 'name' field, summing the 'balance' of accounts with the same name.
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const bankAccountSchema = z.object({
   name: z.string(),
   balance: z.number(),
@@ -27,6 +26,8 @@ class RemoveDuplicate implements IBankAccountRemoveDuplicates {
   }
 
   removeDuplicate() {
+    bankAccountSchema.parse(this.bankAccounts);
+
     const newList = this.bankAccounts.reduce((acc, bank) => {
       const bankAlreadyExists = acc.find((item) => item.name === bank.name);
 
