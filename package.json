@@ -4,9 +4,11 @@
   "main": "index.ts",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node src/coinConvert.ts"
+    "dev": "ts-node src/exercises/removeDuplicate.ts"
   },
-  "dependencies": {},
+  "dependencies": {
+    "zod": "^3.25.56"
+  },
   "devDependencies": {
     "@eslint/js": "^9.25.1",
     "eslint": "^9.25.1",
